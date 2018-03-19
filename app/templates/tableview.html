@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="row" class="center">
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+	  {% for col in speed[0] %}
+      <th scope="col">{{ col }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+	  	{% for row in speed[1:] %}
+    <tr class="rows">
+    	{% for cell in row %}
+      <td class="cells">{{ cell }}</td>
+	    {% endfor %} 
+    </tr>
+	    {% endfor %}
+  </tbody>
+</table>
+</div class="center">
+<div class="row">
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+	  {% for col in availability[0] %}
+      <th scope="col">{{ col }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+	  	{% for row in availability[1:] %}
+    <tr class="rows">
+    	{% for cell in row %}
+      <td class="cells">{{ cell }}</td>
+	    {% endfor %} 
+    </tr>
+	    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

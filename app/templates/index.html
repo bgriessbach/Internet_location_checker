@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="jumbotron vertical-center">
+<div class="container">
+	<div class="row">
+		<h1 class="display-4">Check average Speed and Availability in your Area</h1>
+				<form class="form-inline" action="{{ url_for('search') }}" method="post">
+					<input class="form-control" type="search" placeholder="Search for your area..." aria-label="Search" name="query">
+					<button class="btn btn-outline-secondary" type="submit">Search</button>
+				</form>
+	</div>
+</div>
+</div>
+{% endblock %}
+

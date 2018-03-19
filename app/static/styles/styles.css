@@ -1,0 +1,23 @@
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.layout {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.center {
+	align-items: center;
+	display: flex;
+	width: 75%;
+	height: 50%;
+}
+
+tr {display: block; }
+tbody { display: block; overflow: auto;} 
