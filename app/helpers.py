@@ -33,7 +33,7 @@ def searchFile(file, query):
 			gotHeaders = True
 		if row[0] == query or row[0].startswith(query) and len(data) < 10:
 			data["availability"].append([row[0]] + row[2:9])
-			data["speed"].append([row[0]] + row[12:15] + row[21:24])
+			data["speed"].append([row[0]] + row[11:14] + row[20:23])
 	return data
 
 #download CSV from online location
