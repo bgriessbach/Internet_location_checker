@@ -14,10 +14,24 @@
 
 .center {
 	align-items: center;
-	display: flex;
-	width: 75%;
-	height: 50%;
+	 display: flex;
+	 padding-bottom: 20px;
 }
 
-tr {display: block; }
-tbody { display: block; overflow: auto;} 
+tr {
+width: 100%;
+display: inline-table;
+table-layout: fixed;
+}
+
+table{
+ display: -moz-groupbox;
+ height: 300px;
+ overflow-y: scroll;    
+}
+tbody{
+  overflow-y: scroll;
+  height: 250px;           
+  width: 100%;
+  display: block;
+}

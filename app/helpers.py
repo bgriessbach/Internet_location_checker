@@ -13,7 +13,7 @@ def formatInput(query):
 def getLookup(query):
 	lookup = ""
 	for c in query[:2]:
-		if c.isalpha() and len(lookup) < 2:
+		if c.isalpha():
 			lookup+=c
 	return lookup
 
@@ -29,17 +29,18 @@ def searchFile(file, query):
 			data["availability"] = []
 			data["availability"].append([row[0].upper()] + row[3:10])
 			data["speed"] = []
-			data["speed"].append([row[0].upper()] + row[11:14] + row[20:23])
+			data["speed"].append([row[0].upper()] + row[11:14] + row[19:22])
 			gotHeaders = True
 		if row[0] == query or row[0].startswith(query) and len(data) < 10:
-			data["availability"].append([row[0]] + row[2:9])
-			data["speed"].append([row[0]] + row[11:14] + row[20:23])
+			data["availability"].append([row[0]] + row[3:10])
+			data["speed"].append([row[0]] + row[11:14] + row[19:22])
 	return data
 
 #download CSV from online location
 def getCSV(path):
 	with requests.Session() as s:
-		file = s.get(path)
+		file = s.get(path, timeout=4)
+		if file.status_code != 200:
+			return ["error", str(file.status_code)]
 		decodedFile = file.content.decode('utf-8')
 	return decodedFile
-

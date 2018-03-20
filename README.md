@@ -37,7 +37,8 @@ After the successful installation:
 * added bootstrap
 * added basic csv functionality
 * add basic visualisation
+* added return button and error handling
+* tested successfully in latest Chrome, FF, Opera
 
 ## Next:
-* add Error Handling
-* possibly add different visualisation
+* fix bug where IE and Edge do not show the table scroll
