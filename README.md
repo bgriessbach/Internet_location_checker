@@ -12,7 +12,7 @@ In order to use it locally, please do the following:
   * flask (http://flask.pocoo.org/)
   * requests (http://docs.python-requests.org/en/master/user/install/#install)  
 5. This project uses an external config file to get the path and base file name for the csvs needed. I have uploaded the files to an S3 bucket.
-Please create a config.ini file on the app folder level with the following content:
+Please create a config.ini file in the app folder with the following content:
 ```
 [DEFAULT]
 DATAPATH = https://s3.eu-west-2.amazonaws.com/internet-speed-data-ofcom/
