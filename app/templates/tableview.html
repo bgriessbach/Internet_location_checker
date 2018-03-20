@@ -6,9 +6,10 @@
 				<form class="form-inline" action="{{ url_for('index') }}" method="post">
 					<button class="btn btn-outline-secondary" type="submit">New Search</button>
 				</form>
+				<h4 class="info">(Results are limited to a maximum of 50 lines per table.)</h4>
 </div>
-<div class="row" class="center">
-<table class="table table-bordered table-striped">
+<div class="row center">
+<table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>
 	  {% for col in speed[0] %}
@@ -26,9 +27,9 @@
 	    {% endfor %}
   </tbody>
 </table>
-</div class="center">
-<div class="row">
-<table class="table table-bordered table-striped">
+</div>
+<div class="row center">
+<table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>
 	  {% for col in availability[0] %}

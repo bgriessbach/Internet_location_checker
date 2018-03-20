@@ -31,7 +31,7 @@ def searchFile(file, query):
 			data["speed"] = []
 			data["speed"].append([row[0].upper()] + row[11:14] + row[19:22])
 			gotHeaders = True
-		if row[0] == query or row[0].startswith(query) and len(data) < 10:
+		if (row[0] == query or row[0].startswith(query)) and (len(data["availability"]) <50):
 			data["availability"].append([row[0]] + row[3:10])
 			data["speed"].append([row[0]] + row[11:14] + row[19:22])
 	return data
